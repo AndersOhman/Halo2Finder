@@ -47,7 +47,7 @@ To see if, when, and how many times you played [Halo 2](https://en.wikipedia.org
 
 ### Dependencies
 - [Julia](https://julialang.org/)
-- Developed and ran using both OS X 10.13 and Windows 10
+- Developed and ran using both [macOS X](https://www.apple.com/macos/) 10.13 and [Windows 10](https://www.microsoft.com/en-us/windows/get-windows-10)
 - Internet access to connect to [Halo.Bungie.Net](https://halo.bungie.net/Stats/PlayerStatsHalo2.aspx).
 
 Julia Packages:
@@ -66,4 +66,5 @@ Next steps:
 ### Contact
 Anders Ohman\
 Doctoral Student, Brown University\
+Pathobiology PhD Program\
 anders_ohman@brown.edu
