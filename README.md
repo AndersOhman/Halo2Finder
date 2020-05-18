@@ -9,10 +9,10 @@ To see if, when, and how many times you played Halo 2 on Xbox Live with someone 
 1. Input gamertag 1 (i.e. yours).
 2. Input gamertag 2 (i.e. your friends').
 3. The script will load the primary gamertag's Game Viewer page.
-             1. It counts the number of pages to search through, and calculates search duration based on the delay.
-             2. For each page, it opens every game listed sequentially.
-             3. It then searches the game for the secondary gamertag.
-             4. If found, it makes a note of the game ID number.
+      1. It counts the number of pages to search through, and calculates search duration based on the delay.
+      2. For each page, it opens every game listed sequentially.
+      3. It then searches the game for the secondary gamertag.
+      4. If found, it makes a note of the game ID number.
 4. It returns a text file of the results, including a count of how many games resulted and links to the viewer pages!
 
 ### Dependencies
