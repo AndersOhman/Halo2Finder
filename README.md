@@ -33,7 +33,7 @@ Made (in part) as a "fun" exercise to teach myself how to scrape and parse webpa
 Dedicated to Aaron Crootof.
 
 ### Core Concept
-To see if, when, and how many times you played Halo 2 on Xbox Live with someone else by searching the legacy Game Viewer for both of your gamertags and exporting a list of games (with links to the viewer pages).\
+To see if, when, and how many times you played [Halo 2](https://en.wikipedia.org/wiki/Halo_2) on [Xbox Live](https://www.xbox.com/en-US/live) with someone else, by searching the legacy Game Viewer for both of your gamertags and exporting a list of games (with links to the viewer pages).
 
 ### Instructions
 1. Input gamertag 1 (i.e. yours).
@@ -46,7 +46,7 @@ To see if, when, and how many times you played Halo 2 on Xbox Live with someone 
 4. It returns a text file of the results, including a count of how many games resulted and links to the viewer pages!
 
 ### Dependencies
-- Julia
+- [Julia](https://julialang.org/)
 - Developed and ran using both OS X 10.13 and Windows 10
 - Internet access to connect to [Halo.Bungie.Net](https://halo.bungie.net/Stats/PlayerStatsHalo2.aspx).
 
@@ -66,5 +66,4 @@ Next steps:
 ### Contact
 Anders Ohman\
 Doctoral Student, Brown University\
-Pathobiology PhD Program\
 anders_ohman@brown.edu
