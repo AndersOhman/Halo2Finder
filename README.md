@@ -32,6 +32,10 @@
 Made (in part) as a "fun" exercise to teach myself how to scrape and parse webpages in Julia.\
 Dedicated to Aaron Crootof.
 
+### Updates
+- March 21st, 2018: Original Release
+- May 19th, 2020: Oh jeez, it looks like everything about Julia changed! The `Requests` package I used has been depreciated in favor of [HTTP](https://github.com/JuliaWeb/HTTP.jl), which looks like it works a bit differently. In addition, some basic Julia syntax (like `readline(STDIN)`) has changed as well, breaking everything. So this doesn't work right now! But believe me, it did. It may take some time to retrofit...
+
 ### Core Concept
 To see if, when, and how many times you played [Halo 2](https://en.wikipedia.org/wiki/Halo_2) on [Xbox Live](https://www.xbox.com/en-US/live) with someone else, by searching the legacy Game Viewer for both of your gamertags and exporting a list of games (with links to the viewer pages).
 
