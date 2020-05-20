@@ -48,14 +48,14 @@ gamertag1 = readline()
 print("> Please enter Gamertag 2 (or \"(G)\" for Guest): ") #Defection
 gamertag2 = readline()
 
+output_file = open("HaloFinderOutput_$gamertag1+$gamertag2.txt", "w")
 if gamertag2 == "(G)"
-    gamertag2 = string(gamertag1, "(G)")
+    gamertag2 = string(gamertag1, "\\(G\\)")
     println("I'll look if $gamertag1 and a guest played Halo 2 online together.")
 else
     println("I'll look if $gamertag1 and $gamertag2 played Halo 2 online together.")
 end
 println("**********************************************************")
-output_file = open("HaloFinderOutput_$gamertag1+$gamertag2.txt", "w")
 url = "https://halo.bungie.net/Stats/PlayerStatsHalo2.aspx?player=$gamertag1"
 # Read string "xxxx items in yyy pages"
 h = parsehtml(read(download(url), String))
