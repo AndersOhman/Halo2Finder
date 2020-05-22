@@ -67,15 +67,15 @@ Next steps:
 - [X] Update to Julia 1.0 syntax changes
 - [X] Fix Guest searching
 - [ ] Tiny ASCII boot logo `(43)`
-- [ ] Parse timestamp of each game `(82)`
-- [ ] Get date info for each game `(109)`
+- [ ] Parse timestamp of each game `(84)`
+- [ ] Get date info for each game `(111)`
 - [ ] Add a "verbose" toggle for the `.` and `*` display
-- [ ] Report additional game stats (i.e. % of games, first game, win/loss) `(129)`\
+- [ ] Report additional game stats (i.e. % of games, first game, win/loss) `(131)`
 
 Time estimate things:
-- [ ] Grab the current time and give finish time estimate `(97)`
-- [ ] Implement a loading bar `(85)`
-- [ ] Report actual time elapsed `(125)`
+- [ ] Grab the current time and give finish time estimate `(99)`
+- [ ] Implement a loading bar `(87)`
+- [ ] Report actual time elapsed `(127)`
 
 ### Contact
 Anders Ohman\
