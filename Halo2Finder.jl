@@ -48,7 +48,9 @@ gamertag1 = readline()
 print("> Please enter Gamertag 2 (or \"(G)\" for Guest): ") #Defection
 gamertag2 = readline()
 
-output_file = open("HaloFinderOutput_$gamertag1+$gamertag2.txt", "w")
+file = "HaloFinderOutput_$gamertag1+$gamertag2.txt"
+output_file = open(file, "w")
+write(output_file,"Game history of $gamertag1 and $gamertag2:\n\n")
 if gamertag2 == "(G)"
     gamertag2 = string(gamertag1, "\\(G\\)")
     println("I'll look if $gamertag1 and a guest played Halo 2 online together.")
@@ -127,7 +129,7 @@ println("Finished scanning games.")
 if length(matchSet) > 0
     println("$(length(matchSet)) matches found! Please check output file for a copy.\n")
     #NOTE: Print out stats like % games, first game, etc.
-    data_file = open("HaloFinderOutput_$gamertag1+$gamertag2.txt","r")
+    data_file = open(file,"r")
     for line in eachline(data_file)
         println("$line")
     end

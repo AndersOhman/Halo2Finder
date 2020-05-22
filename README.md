@@ -33,16 +33,16 @@ Made (in part) as a "fun" exercise to teach myself how to scrape and parse webpa
 Dedicated to Aaron Crootof.
 
 ### Updates
-- March 21st, 2018: Original Release
-- May 19th, 2020: It looks like everything about Julia changed since I wrote this! The [Requests](https://github.com/JuliaWeb/Requests.jl) package I used has been depreciated in favor of [HTTP](https://github.com/JuliaWeb/HTTP.jl). In addition, some basic Julia syntax (like `readline(STDIN)`) has changed as well, breaking... everything. It may take some time to retrofit this...
-- May 20th, 2020: Okay, that wasn't too bad. The old version should still work under [Julia 0.7](https://julialang.org/downloads/oldreleases/#v070_aug_8_2018), but the latest version has been updated to the standards of [Julia 1.0](https://julialang.org/downloads/). I also fixed the Guest bug (needed two escape `\` for a string + regex combo).
+- **March 21st, 2018:** Original Release
+- **May 19th, 2020:** It looks like everything about Julia changed since I wrote this! The [Requests](https://github.com/JuliaWeb/Requests.jl) package I used has been depreciated in favor of [HTTP](https://github.com/JuliaWeb/HTTP.jl). In addition, some basic Julia syntax (like `readline(STDIN)`) has changed as well, breaking... everything. It may take some time to retrofit this...
+- **May 20th, 2020:** Okay, that wasn't too bad. The old version should still work under [Julia 0.7](https://julialang.org/downloads/oldreleases/#v070_aug_8_2018), but the latest version has been updated to the standards of [Julia 1.0](https://julialang.org/downloads/). I also fixed the Guest bug (needed two escape `\` for a string + regex combo).
 
 ### Core Concept
 To see if, when, and how many times you played [Halo 2](https://en.wikipedia.org/wiki/Halo_2) on [Xbox Live](https://www.xbox.com/en-US/live) with someone else, by searching the legacy Game Viewer for both of your gamertags and exporting a list of games (with links to the viewer pages).
 
 ### Instructions
-1. Input gamertag 1 (i.e. yours).
-2. Input gamertag 2 (i.e. your friends').
+1. Input gamertag 1 *(i.e. yours).*
+2. Input gamertag 2 *(i.e. your friends').*
 3. The script will load the primary gamertag's Game Viewer page.
       1. It counts the number of pages to search through, and calculates search duration based on the delay.
       2. For each page, it opens every game listed sequentially.
@@ -65,12 +65,13 @@ Julia Packages:
 ### TODO
 Next steps:
 - [X] Update to Julia 1.0 syntax changes
-- [X] Fix Guest searching bug
+- [X] Fix Guest searching
 - [ ] Tiny ASCII boot logo `(43)`
-- [ ] Parse timestamp of each game `(85)`
+- [ ] Parse timestamp of each game `(82)`
 - [ ] Get date info for each game `(109)`
 - [ ] Add a "verbose" toggle for the `.` and `*` display
 - [ ] Report additional game stats (i.e. % of games, first game, win/loss) `(129)`\
+
 Time estimate things:
 - [ ] Grab the current time and give finish time estimate `(97)`
 - [ ] Implement a loading bar `(85)`
