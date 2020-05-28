@@ -71,8 +71,11 @@ println("Going through $pages pages to check $items games.")
 # Open each page to grab game IDs
 page = 1
 gameIDset = Set()
+gameDate = Dict()
+gamenum = 0
 while page <= pages
     global page
+    global gamenum
     #println("Searching page $page...")
     url = "https://halo.bungie.net/Stats/PlayerStatsHalo2.aspx?player=$gamertag1&ctl00_mainContent_bnetpgl_recentgamesChangePage=$page"
     # Get each game ID from page, push to a Set
@@ -80,8 +83,16 @@ while page <= pages
     for result_line in split(h, "\n")
         gameid = match(r"gameid=(\d+)&", result_line)
         if gameid != nothing
-            push!(gameIDset, gameid[1])
-            #NOTE: Grab timestamp?
+            gamenum = gameid[1]
+            push!(gameIDset, gamenum)
+            #println("Game # $gamenum")
+        end
+        # Grab the date of the game, push to a Dictionary
+        dateid = match(r"(\d+\/{1}\d+\/\d+ \d+:\d+:\d+ [A-Z]{2})",result_line)
+        if dateid != nothing && gamenum != 0
+            daynum = dateid[1]
+            gameDate[gamenum] = daynum
+            #println("Date: $daynum")
         end
     end
     print(".") #NOTE: Try a loading bar implementation instead? https://github.com/timholy/ProgressMeter.jl
@@ -114,6 +125,9 @@ for game in sort(collect(gameIDset))
                 write(output_file, "Match #$(length(matchSet)): $game\n$url\n\n")
                 #println("\nMatch #$(length(matchSet)): $game\n$url")
                 lastgame = game
+                datetime = gameDate[game]
+                write(output_file, "Date: $datetime\n\n")
+                #println("$datetime\n\n")
                 print("*")
             end
         end

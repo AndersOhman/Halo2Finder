@@ -36,6 +36,7 @@ Dedicated to Aaron Crootof.
 - **March 21st, 2018:** Original Release
 - **May 19th, 2020:** It looks like everything about Julia changed since I wrote this! The [Requests](https://github.com/JuliaWeb/Requests.jl) package I used has been depreciated in favor of [HTTP](https://github.com/JuliaWeb/HTTP.jl). In addition, some basic Julia syntax (like `readline(STDIN)`) has changed as well, breaking... everything. It may take some time to retrofit this...
 - **May 20th, 2020:** Okay, that wasn't too bad. The old version should still work under [Julia 0.7](https://julialang.org/downloads/oldreleases/#v070_aug_8_2018), but the latest version has been updated to the standards of [Julia 1.0](https://julialang.org/downloads/). I also fixed the Guest bug (needed two escape `\` for a string + regex combo).
+- **May 27th, 2020:** Now the date and time of each game is grabbed and written to the output.
 
 ### Core Concept
 To see if, when, and how many times you played [Halo 2](https://en.wikipedia.org/wiki/Halo_2) on [Xbox Live](https://www.xbox.com/en-US/live) with someone else, by searching the legacy Game Viewer for both of your gamertags and exporting a list of games (with links to the viewer pages).
@@ -67,8 +68,8 @@ Next steps:
 - [X] Update to Julia 1.0 syntax changes
 - [X] Fix Guest searching
 - [ ] Tiny ASCII boot logo `(43)`
-- [ ] Parse timestamp of each game `(84)`
-- [ ] Get date info for each game `(111)`
+- [X] Parse timestamp of each game
+- [X] Get date info for each game
 - [ ] Add a "verbose" toggle for the `.` and `*` display
 - [ ] Report additional game stats (i.e. % of games, first game, win/loss) `(131)`
 
