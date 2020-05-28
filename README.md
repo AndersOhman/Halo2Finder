@@ -74,9 +74,9 @@ Next steps:
 - [ ] Report additional game stats (i.e. % of games, first game, win/loss) `(131)`
 
 Time estimate things:
-- [ ] Grab the current time and give finish time estimate `(99)`
-- [ ] Implement a loading bar `(87)`
-- [ ] Report actual time elapsed `(127)`
+- [ ] Grab the current time and give finish time estimate `(110)`
+- [ ] Implement a loading bar `(98)`
+- [ ] Report actual time elapsed `(141)`
 
 ### Contact
 Anders Ohman\

@@ -107,7 +107,7 @@ totalSecs = sleepTime * length(gameIDset)
 totalMins = trunc(Int, totalSecs/60)
 totalHrs = round((totalMins/60);digits=2)
 println("This will take at least $totalSecs sec / $totalMins min / $totalHrs hrs.")
-#NOTE: Timenow and time to finish
+#NOTE: Timenow and time to finish https://en.wikibooks.org/wiki/Introducing_Julia/Working_with_dates_and_times
 # Search each game for friend's name
 matchSet = Set()
 lastgame = 0
@@ -119,7 +119,7 @@ for game in sort(collect(gameIDset))
         global matchSet
         global lastgame
         gtmatch = match(Regex(gamertag2), result_line)
-        if gtmatch != nothing #NOTE: Could theoretically get date info too......
+        if gtmatch != nothing
             if game != lastgame
                 push!(matchSet, game)
                 write(output_file, "Match #$(length(matchSet)): $game\n$url\n\n")
