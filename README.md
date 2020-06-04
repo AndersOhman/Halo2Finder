@@ -36,6 +36,7 @@ Dedicated to Aaron Crootof.
 - **March 21st, 2018:** Original Release
 - **May 19th, 2020:** It looks like everything about Julia changed since I wrote this! The [Requests](https://github.com/JuliaWeb/Requests.jl) package I used has been depreciated in favor of [HTTP](https://github.com/JuliaWeb/HTTP.jl). In addition, some basic Julia syntax (like `readline(STDIN)`) has changed as well, breaking... everything. It may take some time to retrofit this...
 - **May 20th, 2020:** Okay, that wasn't too bad. The old version should still work under [Julia 0.7](https://julialang.org/downloads/oldreleases/#v070_aug_8_2018), but the latest version has been updated to the standards of [Julia 1.0](https://julialang.org/downloads/). I also fixed the Guest bug (needed two escape `\` for a string + regex combo).
+- **May 27th, 2020:** Now the date and time of each game is grabbed and written to the output as well.
 - **June 3rd, 2020:** Calculates percentage of games played together, and reports date & time of first and last games. Used `OrderedCollections.jl` to do so.
 
 ### Core Concept
