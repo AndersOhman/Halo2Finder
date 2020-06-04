@@ -167,13 +167,13 @@ write(output_file, "$gamertag1 played $totalMatches of $items games ($percentGam
 earliestGame = minimum(gameDateDict)
 earliestGameNum = earliestGame[1]
 earliestGameDate = earliestGame[2]
-write(output_file, "The earliest game you ever played was #$earliestGameNum on $earliestGameDate.\n")
+write(output_file, "The earliest game you ever played was $earliestGameNum on $earliestGameDate.\n")
 
 # Last game ever:
 latestGame = maximum(gameDateDict)
 latestGameNum = latestGame[1]
 latestGameDate = latestGame[2]
-write(output_file, "The latest game you ever played was #$latestGameNum on $latestGameDate.\n\n")
+write(output_file, "The latest game you ever played was $latestGameNum on $latestGameDate.\n\n")
 
 # Last game together:
 lastGameTogether = pop!(matchSet)
