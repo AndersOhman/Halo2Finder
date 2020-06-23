@@ -68,14 +68,16 @@ print("> Please enter Gamertag 2 (or \"(G)\" for Guest): ") #Defection
 gamertag2 = readline()
 
 file = "HaloFinderOutput_$gamertag1+$gamertag2.txt"
+
+if gamertag2 == "(G)"
+    guestBool = true
+    gamertag2 = "a guest"
+end
+
 output_file = open(file, "w")
 write(output_file,"Game history of $gamertag1 and $gamertag2:\n\n")
-if gamertag2 == "(G)"
-    gamertag2 = string(gamertag1, "\\(G\\)")
-    println("I'll look if $gamertag1 and a guest played Halo 2 online together.")
-else
-    println("I'll look if $gamertag1 and $gamertag2 played Halo 2 online together.")
-end
+println("I'll look if $gamertag1 and $gamertag2 played Halo 2 online together.")
+
 println("**********************************************************")
 url = "https://halo.bungie.net/Stats/PlayerStatsHalo2.aspx?player=$gamertag1"
 # Read string "xxxx items in yyy pages"
@@ -134,6 +136,12 @@ println("This will take at least $totalSecs sec / $totalMins min / $totalHrs hrs
 # Search each game for friend's name
 matchSet = OrderedSet()
 lastgame = 0
+
+# Set gamertag2 to the right regex parse commpand
+if guestBool == true
+    gamertag2 = string(gamertag1, "\\(G\\)")
+end
+
 for game in sort(collect(gameIDset))
     url = "https://halo.bungie.net/Stats/GameStatsHalo2.aspx?gameid=$game"
     sleep(sleepTime)
@@ -158,6 +166,11 @@ for game in sort(collect(gameIDset))
     print(".")
 end
 
+# Reset gamertag2 now that we don't need to parse
+if guestBool == true
+    gamertag2 = "a guest"
+end
+
 # Percent of all games together:
 totalMatches = length(matchSet)
 percentGames = round(100*(totalMatches/length(gameIDset));digits=2)
@@ -180,17 +193,14 @@ lastGameTogether = pop!(matchSet)
 lastGameTogetherDate = gameDateDict[lastGameTogether]
 
 # First game together:
-println(length(matchSet))
 while length(matchSet) > 1
     pop!(matchSet)
 end
-println(length(matchSet))
 firstGameTogether = pop!(matchSet)
-println(length(matchSet))
 firstGameTogetherDate = gameDateDict[firstGameTogether]
 
-write(output_file, "The earliest game you ever played TOGETHER was $firstGameTogether on $firstGameTogetherDate.\n")
-write(output_file, "The latest game you ever played TOGETHER was $lastGameTogether on $lastGameTogetherDate.\n\n")
+write(output_file, "The earliest game you played with $gamertag2 was $firstGameTogether on $firstGameTogetherDate.\n")
+write(output_file, "The latest game you played with $gamertag2 was $lastGameTogether on $lastGameTogetherDate.\n\n")
 
 close(output_file)
 print("\n")
