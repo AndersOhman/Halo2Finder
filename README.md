@@ -33,11 +33,14 @@ Made (in part) as a "fun" exercise to teach myself how to scrape and parse webpa
 Dedicated to Defection.
 
 ### Updates
-- **March 21st, 2018:** Original Release
-- **May 19th, 2020:** It looks like everything about Julia changed since I wrote this! The [Requests](https://github.com/JuliaWeb/Requests.jl) package I used has been depreciated in favor of [HTTP](https://github.com/JuliaWeb/HTTP.jl). In addition, some basic Julia syntax (like `readline(STDIN)`) has changed as well, breaking... everything. It may take some time to retrofit this...
-- **May 20th, 2020:** Okay, that wasn't too bad. The old version should still work under [Julia 0.7](https://julialang.org/downloads/oldreleases/#v070_aug_8_2018), but the latest version has been updated to the standards of [Julia 1.0](https://julialang.org/downloads/). I also fixed the Guest bug (needed two escape `\` for a string + regex combo).
-- **May 27th, 2020:** Now the date and time of each game is grabbed and written to the output as well.
+- **May 10th, 2022:** Well, with the [death of the Bungie-era archives](https://www.bungie.net/en/Explore/Detail/News/50006) in 2021, this script will never work again - unless someone adapts it to work with the [archive.org](https://archive.org/details/archiveteam_halo) backup.
 - **June 3rd, 2020:** Calculates percentage of games played together, and reports date & time of first and last games. Used `OrderedCollections.jl` to do so.
+- **May 27th, 2020:** Now the date and time of each game is grabbed and written to the output as well.
+- **May 20th, 2020:** Okay, that wasn't too bad. The old version should still work under [Julia 0.7](https://julialang.org/downloads/oldreleases/#v070_aug_8_2018), but the latest version has been updated to the standards of [Julia 1.0](https://julialang.org/downloads/). I also fixed the Guest bug (needed two escape `\` for a string + regex combo).
+- **May 19th, 2020:** It looks like everything about Julia changed since I wrote this! The [Requests](https://github.com/JuliaWeb/Requests.jl) package I used has been depreciated in favor of [HTTP](https://github.com/JuliaWeb/HTTP.jl). In addition, some basic Julia syntax (like `readline(STDIN)`) has changed as well, breaking... everything. It may take some time to retrofit this...
+- **March 21st, 2018:** Original Release
+
+
 
 ### Core Concept
 To see if, when, and how many times you played [Halo 2](https://en.wikipedia.org/wiki/Halo_2) on [Xbox Live](https://www.xbox.com/en-US/live) with someone else, by searching the legacy Game Viewer for both of your gamertags and exporting a list of games (with links to the viewer pages).
