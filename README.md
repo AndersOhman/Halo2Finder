@@ -30,7 +30,7 @@
 ```
 
 Made (in part) as a "fun" exercise to teach myself how to scrape and parse webpages in Julia for an academic project.\
-Dedicated to Aaron Crootof.
+Dedicated to Defection.
 
 ### Updates
 - **March 21st, 2018:** Original Release
@@ -82,4 +82,4 @@ Time estimate things:
 
 ### Contact
 Anders Ohman\
-mjolnirman@gmail.com
+andy.ohman@gmail.com

@@ -29,8 +29,8 @@
 # Program:                  Halo2Finder.jl
 # Name:                     The Halo2 Online Friend Finder
 # Purpose:                  To see if/when you played Halo2 on XBL with someone
-# Description:                  Dedicated to Aaron Crootof
-# Created by: 				Anders Ohman (mjolnirman@gmail.com)
+# Description:                  Dedicated to Defection
+# Created by: 				Anders Ohman (andy.ohman@gmail.com)
 # Created on: 				2018-03-21
 # Updated on:               2020-06-03
 #
@@ -62,9 +62,9 @@ println("                     ^^^^^^^^^^^^^^^                      ")
 println("**********************************************************")
 println("Welcome to the Halo2 Friend Finder!")
 println("This will look through Bungie.net for old Halo2 game records.")
-print("> Please enter Gamertag 1: ") #D33pTh0ugh7
+print("> Please enter Gamertag 1: ")
 gamertag1 = readline()
-print("> Please enter Gamertag 2 (or \"(G)\" for Guest): ") #Defection
+print("> Please enter Gamertag 2 (or \"(G)\" for Guest): ")
 gamertag2 = readline()
 
 file = "HaloFinderOutput_$gamertag1+$gamertag2.txt"
